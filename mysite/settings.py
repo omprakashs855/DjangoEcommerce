@@ -115,7 +115,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# STATIC_URL is the URL which will serve the static file, eg : http://127.0.0.1:8000/static/images/django.png
 STATIC_URL = 'static/'
+
+# STATIC_ROOT is used to collectstatic all the static files for deployment during production
+STATIC_ROOT = BASE_DIR / 'static'
+
+# List of folders where django will search for additional static files,
+# when you run 'python manage.py runserver' command, django will look for static files
+STATICFILES_DIRS = [
+    'mysite/static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
